@@ -16,7 +16,7 @@ custom_sign_in_page <- function() {
     company_name = "GatherWare, Inc.",
     logo_top = htmltools::tagList(
       tags$img(
-        src = "signinpkg/images/moffitt-logo.svg",
+        src = "signinpkg/images/gw_logo_long.png",
         alt = "Moffitt Cancer Center Logo",
         style = "margin-top: 50px; margin-bottom: 25px; width: 400px;"
       )
