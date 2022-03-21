@@ -17,26 +17,26 @@
 #'
 custom_admin_module_ui <- function() {
   
-  if (identical(.polished$app_name, "MCC-Dynamic-Master-Plan")) {
+  if (identical(.polished$app_name, "Demo-Dynamic-Master-Plan")) {
     dm_li <- tags$li( 
       tags$a(
-        href = "https://gatherware.shinyapps.io/MCC-Data-Management"
+        href = "https://gatherware.shinyapps.io/Demo-Data-Management"
         , target = "blank_"
         , icon("database")
         , "Data Management"
       ),
     )
     name_out <- tagList(
-      icon("rocket"),  
+      icon("line-chart"),  
       "Master Plan"
     )
     
   } else {
-    dm_li <-dm_li <- tags$li( 
+    dm_li <- dm_li <- tags$li( 
       tags$a(
-        href = "https://gatherware.shinyapps.io/MCC-Dynamic-Master-Plan"
+        href = "https://gatherware.shinyapps.io/Demo-Dynamic-Master-Plan"
         , target = "blank_"
-        , icon("rocket")
+        , icon("line-chart")
         , "Master Plan"
       ),
     )
