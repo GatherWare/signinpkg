@@ -105,13 +105,9 @@ custom_admin_module_ui <- function() {
   )
   
   
-  
   tab_items <- shinydashboard::tabItems(
     user_access_module_ui("user_access")
   )
-  
-  
-  
   
   
   body <- shinydashboard::dashboardBody(
