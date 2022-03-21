@@ -16,8 +16,9 @@
 #' @export
 #'
 custom_admin_module_ui <- function() {
-  
-  if (identical(.polished$app_name, "Demo-Dynamic-Master-Plan")) {
+  # If coming from the master planning app
+  if (identical(.polished$app_name, "Demo-App")) {
+    # Set up Second 
     dm_li <- tags$li( 
       tags$a(
         href = "https://gatherware.shinyapps.io/Demo-Data-Management"
@@ -26,13 +27,14 @@ custom_admin_module_ui <- function() {
         , "Data Management"
       ),
     )
+    # Set up First
     name_out <- tagList(
-      icon("line-chart"),  
+      icon("line-chart"),
       "Master Plan"
     )
-    
   } else {
-    dm_li <- dm_li <- tags$li( 
+    # Second
+    dm_li <- tags$li( 
       tags$a(
         href = "https://gatherware.shinyapps.io/Demo-Dynamic-Master-Plan"
         , target = "blank_"
@@ -40,13 +42,13 @@ custom_admin_module_ui <- function() {
         , "Master Plan"
       ),
     )
-    name_out <- name_out <- tagList(
+    # First
+    name_out <- tagList(
       icon("database"),
       "Data Management"
     )
+    
   }
-  
-  
   # don't show profile dropdown if in Admin mode.  User cannot log out of admin mode.
   if (isTRUE(.polished$admin_mode)) {
     head <- shinydashboard::dashboardHeader(
